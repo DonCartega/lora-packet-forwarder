@@ -1,0 +1,14 @@
+root@MerryIoTHotspotV1D240:/opt# service lora_pkt_fwd start
+Job for lora_pkt_fwd.service failed because the service did not take the steps required by its unit configuration.
+See "systemctl status lora_pkt_fwd.service" and "journalctl -xe" for details.
+root@MerryIoTHotspotV1D240:/opt# systemctl status lora_pkt_fwd.service
+● lora_pkt_fwd.service - LoRa packet forwarder
+   Loaded: loaded (/lib/systemd/system/lora_pkt_fwd.service; enabled; vendor preset: enabled)
+   Active: activating (start-pre) since Sun 2023-11-05 19:15:43 CET; 14s ago
+Cntrl PID: 1361 (sleep)
+    Tasks: 1 (limit: 4661)
+   Memory: 84.0K
+   CGroup: /system.slice/lora_pkt_fwd.service
+           └─1361 /bin/sleep 40
+root@MerryIoTHotspotV1D240:/opt# sudo systemctl start lora-packet-forwarder.service
+Failed to start lora-packet-forwarder.service: Unit lora-packet-forwarder.service not found.
